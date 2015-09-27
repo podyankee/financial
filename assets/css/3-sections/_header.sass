@@ -1,0 +1,68 @@
+.main-head
+	position: relative
+	min-height: 620px
+	background-size: cover
+	background-position: center
+	&::before
+		@extend .before
+		background-color: #394b5f
+		opacity: .85
+
+	h1
+		text-transform: none
+
+.top-line
+	min-height: 160px
+	background-image: url(../img/top_gradient.png)
+	padding-top: 45px
+	background-repeat: repeat-x
+
+.logo
+	opacity: .95
+	img
+		width: 100px
+
+.main-mnu
+	font-size:  em(14px)
+	
+	li
+		line-height: 48px
+		padding: 0 10px
+		&.active
+			a
+				color: $main-color
+				text-decoration: underline
+		a:hover
+			color: $main-color
+			text-decoration: underline
+
+
+	ul
+		@extend .ulmnu
+	
+	a
+		text-decoration: none
+		color: #fff
+
+.phone
+	opacity: 0.9
+	color: #fff
+	font-family: "RobotoBold", $helvetica
+	font-size: em(20px)
+	line-height: 48px
+	text-align: right
+	white-spase: nowrap
+
+.toggle-mnu
+	display: block
+	float: right
+	position: absolute
+	right: 0
+	top: 0
+	width: 48px
+	height: 48px
+	text-align: center
+	line-height: 48px
+
+.phone-wrap
+	position: relative

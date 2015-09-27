@@ -1,6 +1,31 @@
 @media (max-width: 1200px)
+	
 	.main-mnu
 		display: none
+		float: right
+		min-width: 295px
+		text-align: right
+		background-color: #1c242c
+		margin-top: 10px
+
+		ul
+			li
+				display: block
+				line-height: 0
+				padding: 0
+			
+			a
+				display: block
+				line-height: 48px
+				padding: 0 20px
+				background-color: transparent
+				font-size: em(18px)
+				transition: all .5s ease
+	
+				&:hover
+					background-color: #273646
+					@extend .trans
+
 	.phone-wrap
 		.phone
 			padding-right: 65px
@@ -14,11 +39,16 @@
 			//text-align: left
 
 		.toggle.mnu
-			line-height: 48px
-			width: 34px
-			height: 34px
-
+			line-height: 34px
+			margin-top: 15px
+			
 	.logo
 		img
 			width: 70px
+
+@media (min-width: 1200px)
+	.main-mnu
+		display: block !important
+		a
+			outline: none
 	

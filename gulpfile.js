@@ -17,7 +17,7 @@ var pngcrush = require('imagemin-pngcrush');
 var env,
     sassStyle;
 
-env = process.env.NODE_ENV || 'development';
+env = process.env.NODE_ENV || 'production';
 
 if (env==='development') 
   {
@@ -72,8 +72,12 @@ gulp.task('browser-sync', ['sass', 'jekyll-build'], function() {
 });
 
 gulp.task('js', function() {
-  return gulp.src(['assets/js/functions.js'])
+  return gulp.src(['assets/js/modernizr.js','assets/js/functions.js'])
+  	.pipe(sourcemaps.init())
   	.pipe(customPlumber('Error Running JS'))
+  	.pipe(concat('functions.js'))
+  	.pipe(rename('all.min.js'))
+  	.pipe(sourcemaps.write())
   	.pipe(gulpif(env === 'production', uglify()))
     .pipe(gulp.dest('_site/assets/js'))
   	.pipe(browserSync.reload({stream:true}));

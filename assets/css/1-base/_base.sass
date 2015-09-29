@@ -1,27 +1,27 @@
 
 
 *::-webkit-input-placeholder
-	color: #666
+	color: #fff
 	opacity: 1
 
 *:-moz-placeholder
-	color: #666
+	color: #fff
 	opacity: 1
 
 *::-moz-placeholder
-	color: #666
+	color: #fff
 	opacity: 1
 
 *:-ms-input-placeholder
-	color: #666
+	color: #fff
 	opacity: 1
 
 body input:focus:required:invalid,
 body textarea:focus:required:invalid
-	color: #666
+	color: #fff
 body input:required:valid,
 body textarea:required:valid
-	color: #666
+	color: #fff
 
 
 body
@@ -78,5 +78,53 @@ b, strong
 	li
 		display: inline-block
 
+.forms
+	background-color: transparentize(#243343, .2)
+	padding: 35px 35px 30px
+	color: #97a4b2
+	font-size: em(14px)
+	border-bottom: 3px solid #1a222b
 
+	h4
+		color: #fff
+		font-family: "PFCentroSlabProMedium", $helvetica
+		font-size: em(33px)
+		text-transform: none
+		margin: 0
+
+	p
+		line-height: em(23px)
+		margin-top: 15px
+
+	label
+		display: block
+		margin-top: 22px
+		margin-bottom: 20px
+		span
+			letter-spacing: 1.5px
+			display: block
+			margin-bottom: 6px
+			color: #778390
+	input
+		display: block
+		width: 100%
+		border: none
+		box-shadow: 0 -3px #1f2a36
+		background-color: #34465a
+		text-indent: 10px
+		padding: 10px 0
+		transition: all .5s ease
+		color: #fff
+		font-family: PFCentroSlabProMedium, $helvetica
+		font-size: em(20px)
+		
+
+		&:focus
+			box-shadow: 0 -6px #1f2a36
+			outline: none
+			background-color: #394e65
+
+	.buttons
+		margin-top: 10px
+		
 

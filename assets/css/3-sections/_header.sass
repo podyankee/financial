@@ -3,6 +3,7 @@
 	min-height: 620px
 	background-size: cover
 	background-position: center
+	padding-bottom: 120px
 	&::before
 		@extend .before
 		background-color: #394b5f
@@ -10,6 +11,7 @@
 
 	h1
 		text-transform: none
+		line-height: em(18px)
 
 .top-line
 	min-height: 160px
@@ -114,3 +116,68 @@
 .toggle-mnu.on + #menu 
 	opacity: 1
 	visibility: visible
+
+.header-wrap
+	margin-top: 40px
+	
+
+
+	h1
+		margin-top: 120px
+		color: #fff
+		border-bottom: 5px solid $main-color	
+		display: inline-block
+		padding-bottom: 10px
+
+	ul
+		@extend .ulmnu
+		margin-top: 10px
+		li
+			display: block
+			font-family: "RailwaySemiBlock", $helvetica
+			font-size: 18px
+			padding-bottom: 12px
+			position: relative
+			padding-left: 16px
+			&::before
+				content: ''
+				display: block
+				width: 6px
+				height: 11px
+				+triangle(12px, $main-color, right)
+				position: absolute
+				top: 9px
+				left: 0
+		
+			a
+				color: #fff	
+				text-decoration: none
+				&:hover
+					text-decoration: underline
+	
+.header-left
+	margin-bottom: 50px
+
+.arrow-bottom
+	display: inline-block
+	width: 40px
+	height: 40px
+	background-image: url(../img/arrow_down.png)
+	position: relative
+	z-index: 2
+	cursor: pointer
+	top: 50px
+	transition: all 0.25 ease
+	opacity: .7
+	
+	&:hover
+		opacity: 1
+
+			
+		
+
+		
+
+		
+			
+		

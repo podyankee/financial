@@ -34,6 +34,9 @@
 			padding-right: 65px
 
 @media (max-width: 992px)
+	.section-content
+		.s1-bottom-triangle
+			background-size: cover
 	.header-wrap
 		margin-top: 0
 		h1
@@ -41,6 +44,34 @@
 
 	.main-mnu
 		top: 50px
+
+	.info-item
+		margin: 40px 0
+
+@media (max-width: 768px)
+	.info-item
+		max-width: 100%
+		margin-top: 20px
+		margin-bottom: 20px
+		border-bottom: 1px solid #d6dae0
+		p
+			border: none
+		&:first-child
+			margin-top: 0
+		h4
+			margin-top: 15px
+
+	.s1-bottom
+		.info-item
+			border-color: #546476
+	.info-item-wrap:last-child
+		.info-item
+			&:first-child
+				border-color: transparent	
+	
+	.section_1
+		.section-content
+			background-position: bottom
 
 @media (max-width: 480px)
 	.phone-wrap

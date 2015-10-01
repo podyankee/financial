@@ -17,7 +17,7 @@ var pngcrush = require('imagemin-pngcrush');
 var env,
     sassStyle;
 
-env = process.env.NODE_ENV || 'production';
+env = process.env.NODE_ENV || 'development';
 
 if (env==='development') 
   {

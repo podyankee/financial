@@ -1,0 +1,54 @@
+.section_3
+	@extend .section_1
+	
+	.section-head
+		margin-bottom: 20px
+ 
+	.section-content
+		min-height: 850px
+		background-image: url(../img/s3_sun_bg.png)
+		padding-bottom: 0
+		padding-top: 60px
+		.info-item
+			//margin-top: 90px
+	.info-item-wrap
+		&:nth-child(2)
+			.info-item
+				margin-top: 0
+				
+				p
+					color: #fff
+					border-bottom: none
+	
+		&:nth-child(4),&:nth-child(6)
+			.info-item
+				margin-top: 50px
+	
+		&:nth-child(8)
+			.info-item
+				margin-top: 170px
+	
+		&:nth-child(1),&:nth-child(7)
+			.info-item
+				margin-left: 82px
+	
+		&:nth-child(3),&:nth-child(9)
+			.info-item
+				margin-left: -35px
+	
+		&:nth-child(6)
+			.info-item
+				margin-left: 30px
+	
+	.section-bottom
+		margin-top: 20px
+			
+.s3-img-wrap
+	+size(130px)
+	background-color: $main-color
+	text-align: center
+	border-radius: 50%	
+	margin: 18px 0 0 115px
+	img
+		width: 70px
+		margin-top: 29px

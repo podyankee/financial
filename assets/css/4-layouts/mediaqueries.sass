@@ -33,7 +33,20 @@
 		.phone
 			padding-right: 65px
 
+	.s3-img-wrap
+		margin-left: 80px
+
 @media (max-width: 992px)
+	.s3-img-wrap
+		display: none
+	.section_3 
+		.info-item-wrap .info-item
+			margin: 0 0 40px 0!important
+		.section-content
+			background-image: none
+			min-height: auto
+	.s3-img-wrapper
+		display: none
 	.section-content
 		.s1-bottom-triangle
 			background-size: cover
@@ -44,9 +57,11 @@
 
 	.main-mnu
 		top: 50px
-
-	.info-item
-		margin: 40px 0
+	.section_1
+		.s1-bottom
+			.info-item
+				margin: 40px 0
+				height: auto!important
 
 @media (max-width: 768px)
 	.info-item
@@ -72,6 +87,16 @@
 	.section_1
 		.section-content
 			background-position: bottom
+
+	.section_3
+		.section-content
+			padding-top: 10px
+			.info-item
+				border-color: #546476
+				p
+					margin-bottom: 0
+					
+			
 
 @media (max-width: 480px)
 	.phone-wrap

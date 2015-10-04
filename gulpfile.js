@@ -73,12 +73,12 @@ gulp.task('browser-sync', ['sass', 'jekyll-build'], function() {
 
 gulp.task('js', function() {
   return gulp.src(['assets/js/modernizr.js','assets/js/functions.js'])
-  	.pipe(sourcemaps.init())
+  	//.pipe(sourcemaps.init())
   	.pipe(customPlumber('Error Running JS'))
-  	.pipe(concat('functions.js'))
-  	.pipe(rename('all.min.js'))
-  	.pipe(sourcemaps.write())
-  	.pipe(gulpif(env === 'production', uglify()))
+  	//.pipe(concat('functions.js'))
+  	//.pipe(rename('all.min.js'))
+  	//.pipe(sourcemaps.write())
+  	//.pipe(gulpif(env === 'production', uglify()))
     .pipe(gulp.dest('_site/assets/js'))
   	.pipe(browserSync.reload({stream:true}));
 });
@@ -89,17 +89,16 @@ gulp.task('js', function() {
 gulp.task('sass', function () {
     return gulp.src('assets/css/main.scss')
 		.pipe(customPlumber('Error Running Sass'))
-		.pipe(sourcemaps.init())
         .pipe(sass({
 			outputStyle: sassStyle,
             includePaths: ['css'],
             onError: browserSync.notify
         }))
         .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
-		.pipe(sourcemaps.write())
         .pipe(gulp.dest('_site/assets/css'))
         .pipe(browserSync.reload({stream:true}))
         .pipe(gulp.dest('assets/css'));
+		
 });
 
 /**

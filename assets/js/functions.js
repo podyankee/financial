@@ -49,3 +49,10 @@ $(document).ready(function() {
 	$("img, a").on("dragstart", function(event) { event.preventDefault(); });
 
 });
+
+
+$(".section_1 .section-content .info-item").equalHeights();
+	$(".section_3 .section-content .info-item").equalHeights();
+	$(".s1-bottom .info-item").equalHeights();
+	$(".s2-item").equalHeights();
+	$(".s2-item .img-wrap").equalHeights();

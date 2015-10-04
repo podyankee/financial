@@ -1924,7 +1924,7 @@ b, strong {
 
 .section_1 .section-content,
 .section_3 .section-content,
-.section_2 .section-content {
+.section_2 .section-content, .section_4 .section-content {
   background-image: url(../img/s1_gray_bg.png);
   background-repeat: no-repeat;
   background-position: top;
@@ -1932,7 +1932,7 @@ b, strong {
 
 .section_1 .section-bottom,
 .section_3 .section-bottom,
-.section_2 .section-bottom {
+.section_2 .section-bottom, .section_4 .section-bottom {
   background-color: #2c3949;
   padding: 52px 0;
   text-align: center;
@@ -1940,7 +1940,7 @@ b, strong {
 
 .section_1::before,
 .section_3::before,
-.section_2::before {
+.section_2::before, .section_4::before {
   content: '';
   height: 6px;
   width: 100%;
@@ -2052,6 +2052,22 @@ b, strong {
 .s_dark .info-item p {
   color: #e5e5e5;
   border-bottom: 0;
+}
+
+.s_gray {
+  background-color: #e5e5e5;
+}
+
+.s_gray::before {
+  background-image: url(../img/bah_3.png);
+}
+
+.s_gray .section-bottom {
+  background-color: #d6d6d6 !important;
+}
+
+.section-pb {
+  padding-bottom: 70px;
 }
 
 .button-wrap {
@@ -2300,7 +2316,7 @@ b, strong {
   opacity: 1;
 }
 
-.section_2 .section-bottom {
+.section_2 .section-bottom, .section_4 .section-bottom {
   background-color: #E5E5E5;
   padding: 52px 0;
   text-align: center;
@@ -2424,6 +2440,67 @@ b, strong {
 .s3-img-wrap img {
   width: 70px;
   margin-top: 29px;
+}
+
+.cards {
+  text-align: center;
+  -webkit-perspective: 600px;
+          perspective: 600px;
+}
+
+.cards .card {
+  width: 260px;
+  -webkit-transition: all 1s ease;
+          transition: all 1s ease;
+  display: inline-block;
+  background-color: #2c3949;
+  margin: 0 12px;
+  color: #97a4b2;
+  font-size: 0.9375em;
+  line-height: 1.375em;
+  padding: 54px 28px 42px;
+  vertical-align: top;
+}
+
+.cards .card-on {
+  opacity: 1;
+}
+
+.cards .card-off {
+  -webkit-transform: rotateY(100deg);
+          transform: rotateY(100deg);
+  opacity: 0;
+}
+
+.cards .card .card-icon {
+  width: 120px;
+  height: 120px;
+  display: inline-block;
+  background-color: #f39f18;
+  border-radius: 50%;
+  position: relative;
+  line-height: 120px;
+}
+
+.cards .card .card-icon img {
+  width: 75px;
+}
+
+.cards .card h4 {
+  color: #e5e5e5;
+  font-family: "RalewayBold", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-size: 1.125em;
+  margin-top: 30px;
+  margin-bottom: 18px;
+}
+
+.cards .card p {
+  margin-bottom: 0;
+  height: 80px;
+}
+
+.cards .card p strong {
+  color: #f39f18;
 }
 
 @media (max-width: 1200px) {

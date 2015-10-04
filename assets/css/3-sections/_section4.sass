@@ -1,0 +1,43 @@
+.section_4
+	@extend .section_2
+	
+.cards
+	text-align: center
+	perspective: 600px
+	.card
+		&-on
+			opacity: 1
+		&-off
+			transform: rotateY(100deg)
+			opacity: 0
+		width: 260px
+		transition: all 1s ease
+		display: inline-block
+		background-color: #2c3949
+		margin: 0 12px
+		color: #97a4b2
+		font-size: em(15px)
+		line-height: em(22px)
+		padding: 54px 28px 42px
+		vertical-align: top
+		.card-icon
+			width: 120px
+			height: 120px
+			display: inline-block
+			background-color: $main-color
+			border-radius: 50%
+			position: relative
+			line-height: 120px
+			img
+				width: 75px
+		h4
+			color: #e5e5e5
+			font-family: "RalewayBold", $helvetica
+			font-size: em(18px)
+			margin-top: 30px
+			margin-bottom: 18px
+		p
+			margin-bottom: 0
+			height: 80px
+			strong
+				color: $main-color

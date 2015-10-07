@@ -47,6 +47,8 @@ $(document).ready(function() {
 	};
 
 	$("img, a").on("dragstart", function(event) { event.preventDefault(); });
+	
+    
 
 });
 
@@ -69,4 +71,21 @@ $(".section_4").waypoint(function  () {
   
 }, {
 	offset: "5%"
+}); 
+
+$(".section_5").waypoint(function  () {
+  $(".section_5 .tc-item").each(function  (index) {
+	  var ths = $(this);
+	  setTimeout(function  () {
+		var myAnimation = new DrawFillSVG({
+      elementId: "tc-svg" + index
+    });
+	    ths.removeClass("").addClass("");
+	  }, 700*index);
+    
+  });
+	this.destroy();
+  
+}, {
+	offset: "25%"
 }); 

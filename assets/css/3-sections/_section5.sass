@@ -14,9 +14,16 @@
 		position: relative
 		margin-left: -40px
 		vertical-align: top
+		transition: all .5s ease
 		&:first-child
 			.tc-content
 				margin-left: 40px
+		&:hover
+			transform: scale(1.08)
+			z-index: 3
+			path
+				fill-opacity: 0!important
+				stroke-opacity: 1!important
 		svg
 			position: absolute
 			top: 0

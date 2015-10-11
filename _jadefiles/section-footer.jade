@@ -35,3 +35,21 @@ footer.main-footer.homesect.s_dark
 										a(href="#") Контакты
 										
 .top(title="Наверх")
+.hidden
+	form.forms#callback
+		h4 Заявка : 
+		p Оставьте заявку и мы свяжемся с вами в течение 15 минут в рабочее время с 10:00 до 18:00 с пн-пт.
+						
+		label
+			span Ваше имя:
+			input(type="text", name="name", required)
+							
+		label
+			span Ваш телефон:
+			input(type="phone", name="phone", required)
+							
+		.button-wrap 
+			button.buttons Отправить
+							
+		input(type="hidden", name="formname", value="")
+							

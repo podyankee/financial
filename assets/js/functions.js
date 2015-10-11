@@ -10,6 +10,11 @@ $(document).ready(function() {
 		  return false;
 	  });
 	
+	$(".top").click(function() {
+	   $("html,body").animate({scrollTop: 0}, "slow") ;
+		  return false;
+	  });
+	
 	$(".arrow-bottom").click(function() {
 	   $("html,body").animate({scrollTop: $(".main-head").height()+120}, "slow") ;
 		  return false;
@@ -45,6 +50,16 @@ $(document).ready(function() {
 	offset: "30%"
 	  });
 
+	$(".homesect .section-bottom .buttons").click(function  () {
+	  $("#callback input[name=formname]").val($(this).text());
+	  $("#callback h4").html($(this).text());
+	}).magnificPopup({
+		type: 'inline',
+		mainClass: 'mfp-forms'
+	});
+	
+	
+	
 	//Цели для Яндекс.Метрики и Google Analytics
 	$(".count_element").on("click", (function() {
 		ga("send", "event", "goal", "goal");
@@ -61,16 +76,16 @@ $(document).ready(function() {
 
 	//Аякс отправка форм
 	//Документация: http://api.jquery.com/jquery.ajax/
-	$("#form").submit(function() {
+	$(".forms").submit(function() {
 		$.ajax({
 			type: "POST",
-			url: "mail.php",
+			url: "/mail.php",
 			data: $(this).serialize()
 		}).done(function() {
 			alert("Спасибо за заявку!");
 			setTimeout(function() {
 				
-				$("#form").trigger("reset");
+				$(".forms").trigger("reset");
 			}, 1000);
 		});
 		return false;

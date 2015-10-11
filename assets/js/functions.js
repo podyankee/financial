@@ -4,6 +4,18 @@ $(document).ready(function() {
 	  $(this).toggleClass("on");
 	  $(".main-mnu").slideToggle();
 	});
+	
+	$(".main-footer .toggle-mnu").click(function() {
+	   $("html,body").animate({scrollTop: $(document).height()}, "slow") ;
+		  return false;
+	  });
+	
+	$(".arrow-bottom").click(function() {
+	   $("html,body").animate({scrollTop: $(".main-head").height()+120}, "slow") ;
+		  return false;
+	  });
+	
+	//$(".section-head p, .section-head h2").animated("fadeInRight");
 
 	//Цели для Яндекс.Метрики и Google Analytics
 	$(".count_element").on("click", (function() {

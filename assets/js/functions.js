@@ -15,7 +15,35 @@ $(document).ready(function() {
 		  return false;
 	  });
 	
-	//$(".section-head p, .section-head h2").animated("fadeInRight");
+	$(".section-head h2, .section-head p").animated("fadeInRight");
+	$(".info-item-wrap").animated("zoomIn");
+	$(".slider .slide").animated("rollIn");
+	$(".homesect.section_8 .forms").animated("fadeInRight");
+	$(".homesect.section_8 .p").animated("fadeInLeft");
+	
+  $(".section_2").waypoint(function  () {
+  $(".s2-item-wrap").each(function  (index) {
+	  var ths = $(this);
+	  setInterval(function  () {
+	    ths.addClass("on");
+	  }, 150*index);
+    
+  });
+	  }, {
+	offset: "5%"
+	  });
+	
+	$(".section_8").waypoint(function  () {
+  $(".s8-item").each(function  (index) {
+	  var ths = $(this);
+	  setInterval(function  () {
+	    ths.addClass("on");
+	  }, 150*index);
+    
+  });
+		}, {
+	offset: "30%"
+	  });
 
 	//Цели для Яндекс.Метрики и Google Analytics
 	$(".count_element").on("click", (function() {
@@ -85,6 +113,19 @@ $(".section_4").waypoint(function  () {
 	offset: "5%"
 }); 
 
+$(".section_6").waypoint(function  () {
+  $(".section_6 .team").each(function  (index) {
+	  var ths = $(this);
+	  setInterval(function  () {
+	    ths.removeClass("card-off").addClass("card-on");
+	  }, 150*index);
+    
+  });
+  
+}, {
+	offset: "30%"
+}); 
+
 $(".section_5").waypoint(function  () {
   $(".section_5 .tc-item").each(function  (index) {
 	  var ths = $(this);
@@ -96,7 +137,7 @@ $(".section_5").waypoint(function  () {
 	  }, 700*index);
     
   });
-	this.destroy();
+	//this.destroy();
   
 }, {
 	offset: "25%"
